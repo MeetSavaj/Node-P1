@@ -25,7 +25,7 @@ export class ModuleContoller {
             if (module[1]) {
                 return res.status(200).send('Module created successfully').json(module);
             } else {
-                return res.status(400).send('Module not found').json(module);
+                return res.status(400).send('Module already exist').json(module);
             }
         } catch (err) {
             next(err);
